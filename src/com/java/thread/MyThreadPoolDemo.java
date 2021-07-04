@@ -2,6 +2,9 @@ package com.java.thread;
 
 import java.util.concurrent.*;
 
+/**
+ * 线程池
+ */
 public class MyThreadPoolDemo {
 
     public static void main(String[] args) {

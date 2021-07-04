@@ -2,17 +2,22 @@ package com.java.thread;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 死锁
+ */
 public class DeadLockDemo {
 
     public static void main(String[] args) {
         String lockA = "lockA";
         String lockB = "lockB";
-
         new Thread(new HoldLockThread(lockA, lockB), "ThreadA").start();
         new Thread(new HoldLockThread(lockB, lockA), "ThreadB").start();
     }
 }
 
+/**
+ * 内部类
+ */
 class HoldLockThread implements Runnable {
 
     private String lockA;
